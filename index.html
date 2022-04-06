@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./sprite/diamant.png">
+    <link href="./css/styleIndex.css" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay muted id="myVideo1">
+        <source src="./video/partie1.mp4" type="video/mp4">
+    </video>
+
+    <video id="myVideo2" hidden>
+        <source src="./video/partie2BoucleComplet.mp4" type="video/mp4">
+    </video>
+
+    <video id="myVideo3" hidden>
+        <source src="./video/partie3.mp4" type="video/mp4">
+    </video>
+
+    <div class="content" id="idContent" hidden>
+
+        <button type="button" id="buttonJouer" >Nouvelle evasion</button>
+        <button type="button" id="buttonCharger" >Reprendre evasion</button>
+        <button type="button" id="buttonVotreEvasion" >Votre evasion</button>
+
+    </div>
+    
+
+
+</body>
+
+
+<!--<script type="module" src="./js/application/application.js"></script>-->
+<script type="text/javascript" src="./js/menu.js"></script>
+</html>
