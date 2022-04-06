@@ -1,5 +1,5 @@
 import { VueJeu } from "../vues/vueJeu.js";
-import { Controleur } from "../controleurs/Controleur.js";
+//import { Controleur } from "../controleurs/Controleur.js";
 
 class Application
 {
