@@ -35,7 +35,8 @@ window.addEventListener("load", () => {
     const app = new Application();
     //document.getElementById("3;3").style.content = 'url("../../sprite/stickman.png")';
     //console.log(app.vue.positionJoueur);
-    document.getElementById(app.vue.joueur.y+";"+app.vue.joueur.x).style.content = 'url("../../sprite/stickman.png")';
+    //console.log(app.vue.joueur.y+";"+app.vue.joueur.x);
+    document.getElementById(app.vue.joueur.y+";"+app.vue.joueur.x).style.content = 'url("../../sprite/blazkowiczFace.png")';
     
     let position = app.vue.joueur.y+";"+app.vue.joueur.x//app.vue.positionJoueur;//document.getElementById("3;3").id;
     let positionY = app.vue.joueur.y//position.substring(0, 1);
@@ -51,19 +52,22 @@ window.addEventListener("load", () => {
         if(parseInt(positionY)+1 < 16){
             if(checkElement(positionX, parseInt(positionY)+1))
             {
+                //app.vue.updateMap();
                 //console.log(position);
-                comportementEnnemi(positionY);
+                
                 //app.vue.updateBlock(positionX, positionY);
                 document.getElementById(position).style.backgroundImage = "";
                 document.getElementById(position).style.content = "";
                 //console.log(position);
                 positionY = parseInt(positionY)+1;
                 position = positionY+";"+positionX;
-                //console.log(position);
-                document.getElementById(position).style.content = 'url("../sprite/stickman.png")';
-                updateScore(positionX, positionY);
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
+                comportementEnnemi(positionX, positionY);
+                //console.log(position);
+                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.backgroundImage = "";
+                updateScore(positionX, positionY);
                 //app.vue.updateMap();
             }
         }
@@ -73,17 +77,20 @@ window.addEventListener("load", () => {
         if(parseInt(positionY)-1 >= 0){
             if(checkElement(positionX, parseInt(positionY)-1))
             {
-                comportementEnnemi(positionY);
+                //app.vue.updateMap();
+                
                 document.getElementById(position).style.backgroundImage = "";
                 document.getElementById(position).style.content = "";
                 //console.log(position);
                 positionY = parseInt(positionY)-1;
                 position = positionY+";"+positionX;
-                //console.log(position);
-                document.getElementById(position).style.content = 'url("../sprite/stickman.png")';
-                updateScore(positionX, positionY);
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
+                comportementEnnemi(positionX, positionY);
+                //console.log(position);
+                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.backgroundImage = "";
+                updateScore(positionX, positionY);
                 //app.vue.updateMap();
             }
         }
@@ -93,17 +100,20 @@ window.addEventListener("load", () => {
         if(parseInt(positionX)-1 >= 0){
             if(checkElement(parseInt(positionX)-1, positionY))
             {
-                comportementEnnemi(positionY);
+                //app.vue.updateMap();
+                
                 document.getElementById(position).style.backgroundImage = "";
                 document.getElementById(position).style.content = "";
                 //console.log(position);
                 positionX = parseInt(positionX)-1;
                 position = positionY+";"+positionX;
-                //console.log(position);
-                document.getElementById(position).style.content = 'url("../sprite/stickman.png")';
-                updateScore(positionX, positionY);
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
+                comportementEnnemi(positionX, positionY);
+                //console.log(position);
+                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.backgroundImage = "";
+                updateScore(positionX, positionY);
                 //app.vue.updateMap();
             }
         }
@@ -113,17 +123,20 @@ window.addEventListener("load", () => {
         if(parseInt(positionX)+1 < 32){
             if(checkElement(parseInt(positionX)+1, positionY))
             {
-                comportementEnnemi(positionY);
+                //app.vue.updateMap();
+                
                 document.getElementById(position).style.backgroundImage = "";
                 document.getElementById(position).style.content = "";
                 //console.log(position);
                 positionX = parseInt(positionX)+1;
                 position = positionY+";"+positionX;
-                //console.log(position);
-                document.getElementById(position).style.content = 'url("../sprite/stickman.png")';
-                updateScore(positionX, positionY);
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
+                comportementEnnemi(positionX, positionY);
+                //console.log(position);
+                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.backgroundImage = "";
+                updateScore(positionX, positionY);
                 //app.vue.updateMap();
             }
         }
@@ -174,7 +187,7 @@ window.addEventListener("load", () => {
         //console.log(app.listeNiveaux.get(app.map1));
     }
 
-    function comportementEnnemi(positionJoueurY)
+    function comportementEnnemi(positionJoueurX, positionJoueurY)
     {
         let map = app.vue.map1;
         //console.log(app.vue.positionEnnemi);
@@ -182,36 +195,76 @@ window.addEventListener("load", () => {
             let ennemiY = ennemi.substring(0, 1);
             let ennemiX = ennemi.substring(2, 3);
             //Premier saut
-            console.log("Map : "+map[parseInt(ennemiY)+1][ennemiX] == "V");
-            console.log("Map : "+map[parseInt(ennemiY)+1][ennemiX]);
-            console.log("ennemiY :"+(parseInt(ennemiY)+1));
-            console.log("positionJoueurY : "+positionJoueurY);
-            if((map[parseInt(ennemiY)+1][ennemiX] == "V")&&(parseInt(ennemiY)+1 != positionJoueurY)){
-                map[ennemiY][ennemiX] = "V";
-                ennemiY = parseInt(ennemiY)+1;
+            //console.log(positionJoueurY);
+            //console.log("Map : "+map[parseInt(ennemiY)+1][ennemiX]);
+            //console.log("Map : "+map[parseInt(ennemiY)+1][ennemiX] == "V");
+            //console.log("EnnemiY+1 : "+(parseInt(ennemiY)+1));
+            //console.log("JoueurY : "+positionJoueurY);
+            //console.log(parseInt(ennemiY)+1 != positionJoueurY);
+            //console.log(ennemi);
+            //console.log("ennemiY :"+(parseInt(ennemiY)+1));
+            //console.log("positionJoueurY : "+positionJoueurY);
+            //Si la casse du dessous est vide
+            //if(parseInt(ennemiY)+1 < 15){
+            //console.log(parseInt(ennemiY)+1);
+            if((map[parseInt(ennemiY)+1][ennemiX] == "V")){//&&((ennemiY != positionJoueurY)&&(positionJoueurX != ennemiX))){//&&(positionJoueurX != ennemiX)){
+                if((ennemiY != positionJoueurY)&&(positionJoueurX != ennemiX)){
+                    map[ennemiY][ennemiX] = "V";
+                    ennemiY = parseInt(ennemiY)+1;
+                    //Si la chute continue
+                    console.log((parseInt(ennemiY)+1));
+                    //if(parseInt(ennemiY)+1 < 15){
+                    while(map[parseInt(ennemiY)+1][ennemiX] == "V"){
+                        //ennemiY = parseInt(ennemiY)+1;
+                        if((ennemiY == positionJoueurY)&&(positionJoueurX == ennemiX)){
+                            //Partie terminé
+                            //document.getElementById("niveauTermine").hidden = false;
+                            window.location.replace("../niveaux.html");
+                        }
+                        //else{
+                            //ennemiY = parseInt(ennemiY)+1;
+                            //console.log(ennemiY);
+                            //map[ennemiY][ennemiX] = "V";
+                        //}
+                        ennemiY = parseInt(ennemiY)+1;
+                    }
+                    //}
+                }
+                else{
+                    while(map[parseInt(ennemiY)+1][ennemiX] == "V"){
+                        map[ennemiY][ennemiX] = "V";
+                        ennemiY = parseInt(ennemiY)+1;
+                    }
+                    map[ennemiY][ennemiX] = "V";
+                    ennemiY = parseInt(ennemiY)+1;
+                    window.location.replace("../niveaux.html");
+                }
                 //Si la chute continue
-                while(map[parseInt(ennemiY)+1][ennemiX] == "V"){
-                    console.log(map[parseInt(ennemiY)+1][ennemiX]);
-                    console.log(parseInt(ennemiY)+1);
-                    console.log(positionJoueurY);
-                    if(parseInt(ennemiY)+1 == positionJoueurY){
+                /*while(map[parseInt(ennemiY)+1][ennemiX] == "V"){
+                    //console.log(map[parseInt(ennemiY)+1][ennemiX]);
+                    //console.log(parseInt(ennemiY)+1);
+                    //console.log(positionJoueurY);
+                    ennemiY = parseInt(ennemiY)+1;
+                    if((ennemiY == parseInt(positionJoueurY)+1)&&(parseInt(positionJoueurX)+1 == ennemiX)){
                         //Partie terminé
                         //document.getElementById("niveauTermine").hidden = false;
                         window.location.replace("../niveaux.html");
                     }
                     else{
-                        ennemiY = parseInt(ennemiY)+1;
+                        //ennemiY = parseInt(ennemiY)+1;
                         //console.log(ennemiY);
                         //map[ennemiY][ennemiX] = "V";
                     }
-                }
+                }*/
                 map[ennemiY][ennemiX] = "E";
                 //app.vue.map1 = map;
+                //app.vue.updateMap();
             }
+            //}
         });
         app.vue.map1 = map;
-        app.vue.updateMap();
-        //console.log();
+        app.vue.updateMap(map);
+        //console.log(map);
     }
 
     document.getElementById("buttonMenu").addEventListener('click', function(){

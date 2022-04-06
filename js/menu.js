@@ -50,5 +50,5 @@ document.getElementById("buttonCharger").addEventListener('click', function(){
 var video3 = document.getElementById('myVideo3');
 video3.addEventListener('ended', function(){
     //window.open("../niveaux.html");
-    window.location.replace("../niveaux.html");
+    window.location.replace("./../niveaux.html");
 })

@@ -4,22 +4,22 @@ import { Case } from "../modeles/case.js";
 export class VueJeu {
 
     #map1 = [
-        ["T","D","M","D","M","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["E","D","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","D","T","E","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"],
-        ["T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T"]
+        ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","E","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","E","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
         ];
 
     #listeNiveaux = new Map();
@@ -83,6 +83,10 @@ export class VueJeu {
                 if(type == "E"){
                     this.#positionEnnemi.push(i+";"+j);
                 }
+                if(type == "J"){
+                    this.#joueur = new Case(j, i, "J");
+                    console.log(i+";"+j);
+                }
                 div.style.backgroundImage = 'url("'+this.getUrl(type)+'")';
                 div.style.backgroundRepeat = "no-repeat";
                 div.style.backgroundPosition = "center";
@@ -97,10 +101,10 @@ export class VueJeu {
         let url = "";
         switch (type) {
             case "E":
-                url = "../../sprite/enemie.png";
+                url = "../../sprite/enemiShoot.png";
                 break;
             case "D":
-                url = "../../sprite/diamant.png";
+                url = "../../sprite/cle.png";
                 break;
             case "T":
                 url = "../../sprite/terre.png";
@@ -109,8 +113,10 @@ export class VueJeu {
                 url = "../../sprite/vide.png";
                 break;*/
             case "M":
-                url = "../../sprite/mur.png";
+                url = "../../sprite/mur2.png";
                 break;
+            case "J":
+                url = "../../sprite/blazkowiczFace.png";
         }
         return url;
     }
@@ -118,6 +124,7 @@ export class VueJeu {
     updateMap()
     {
         //console.log(this.#map1);
+        //this.#map1 = map;
         this.#positionEnnemi = [];
         const myNode = document.getElementById("grille");
         while (myNode.firstChild) {
@@ -135,6 +142,9 @@ export class VueJeu {
                 }
                 if(type == "E"){
                     this.#positionEnnemi.push(i+";"+j);
+                }
+                if(type == "J"){
+                    this.#joueur = new Case(j, i, "J");
                 }
                 div.style.backgroundImage = 'url("'+this.getUrl(type)+'")';
                 div.style.backgroundRepeat = "no-repeat";
