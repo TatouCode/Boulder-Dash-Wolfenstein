@@ -101,22 +101,22 @@ export class VueJeu {
         let url = "";
         switch (type) {
             case "E":
-                url = "../../sprite/enemiShoot.png";
+                url = "../.././sprite/enemiShoot.png";
                 break;
             case "D":
-                url = "../../sprite/cle.png";
+                url = "../.././sprite/cle.png";
                 break;
             case "T":
-                url = "../../sprite/terre.png";
+                url = "../.././sprite/terre.png";
                 break;
             /*case "V":
                 url = "../../sprite/vide.png";
                 break;*/
             case "M":
-                url = "../../sprite/mur2.png";
+                url = "../.././sprite/mur2.png";
                 break;
             case "J":
-                url = "../../sprite/blazkowiczFace.png";
+                url = "../.././sprite/blazkowiczFace.png";
         }
         return url;
     }
