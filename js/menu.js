@@ -1,8 +1,10 @@
 
 
 
+/**
+ * Lance la première vidéo
+ */
 var videoDebut = document.getElementById('myVideo1');
-//console.log(video);
 videoDebut.addEventListener('ended', function(){
     console.log("fini");
     var video = document.getElementById('myVideo2');
@@ -14,7 +16,9 @@ videoDebut.addEventListener('ended', function(){
 
   });
 
-
+/**
+ * Lance la 2e vidéo
+ */
 document.getElementById("buttonJouer").addEventListener('click', function(){
     document.getElementById('idContent').hidden = true;
     var video2 = document.getElementById('myVideo2');
@@ -26,11 +30,13 @@ document.getElementById("buttonJouer").addEventListener('click', function(){
     video3.hidden = false;
     video3.muted = true;
     video3.autoplay = true;
-    //video3.loop = true;
 
     localStorage.clear();
 });
 
+/**
+ * Lance la 3é video
+ */
 document.getElementById("buttonCharger").addEventListener('click', function(){
     document.getElementById('idContent').hidden = true;
     var video2 = document.getElementById('myVideo2');
@@ -49,6 +55,5 @@ document.getElementById("buttonCharger").addEventListener('click', function(){
 
 var video3 = document.getElementById('myVideo3');
 video3.addEventListener('ended', function(){
-    //window.open("../niveaux.html");
     window.location.replace("./niveaux.html");
 })

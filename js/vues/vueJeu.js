@@ -3,6 +3,9 @@ import { Case } from "../modeles/case.js";
 
 export class VueJeu {
 
+    /**
+     * Map du niveau
+     */
     #map1 = [
         ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
         ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
@@ -30,11 +33,7 @@ export class VueJeu {
 
     #joueur;
 
-    //#controleur;
-
-
     constructor(){
-        //this.#controleur = controleur;
         if(localStorage.getItem('niveau') == null){
             this.#compteDiamant = 0;
             this.#positionEnnemi = [];
@@ -44,14 +43,12 @@ export class VueJeu {
         }
         else{
             this.#map1 = JSON.parse(localStorage.getItem('niveau'));
-            //this.#map1 = localStorage.getItem('niveau');
-            this.#compteDiamant = localStorage.getItem('Comptediamant');
+            this.#compteDiamant = parseInt(localStorage.getItem('Comptediamant'));
             this.#positionEnnemi = [];
             this.#positionEnnemi.push(localStorage.getItem('positionEnnemi'));
             this.#joueur = new Case();
             this.#joueur.x = localStorage.getItem('joueurX');
             this.#joueur.y = localStorage.getItem('joueurY');
-            //console.log(this.#joueur.x);
             this.initialize();
             this.#listeNiveaux.set(this.#map1, "Niveau 1");
         }
@@ -59,6 +56,9 @@ export class VueJeu {
 
     }
 
+    /**
+     * Getter et setter des différents attributs
+     */
     get map1() { return this.#map1; }
     set map1(map) { this.#map1 = map; }
     get listeNiveaux() { return this.#listeNiveaux; }
@@ -70,6 +70,9 @@ export class VueJeu {
     get joueur() { return this.#joueur; }
     set joueur(joueur) { this.#joueur = joueur; }
 
+    /**
+     * Initialise la map
+     */
     initialize() {
         for (let i = 0; i < 16; i++) {
             for (let j = 0; j < 32; j++) {
@@ -94,9 +97,13 @@ export class VueJeu {
                 document.getElementById('grille').appendChild(div);
             }
         }
-        //console.log(this.#positionEnnemi);
     }
 
+    /**
+     * Renvoie l'url du sprite correspondant
+     * @param {*} type 
+     * @returns 
+     */
     getUrl(type) {
         let url = "";
         switch (type) {
@@ -121,10 +128,11 @@ export class VueJeu {
         return url;
     }
 
+    /**
+     * Met à jour la carte à chaque mouvement du joueur
+     */
     updateMap()
     {
-        //console.log(this.#map1);
-        //this.#map1 = map;
         this.#positionEnnemi = [];
         const myNode = document.getElementById("grille");
         while (myNode.firstChild) {
@@ -137,9 +145,6 @@ export class VueJeu {
                 div.classList.add("case");
                 div.id = i+";"+j;
                 let type = this.#map1[i][j];
-                if(type == "D"){
-                    this.#compteDiamant += 1;
-                }
                 if(type == "E"){
                     this.#positionEnnemi.push(i+";"+j);
                 }
