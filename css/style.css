@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "fontWolfenstein";
+    src: url("../font/wolfenstein.ttf");
+}
 
 #grille{
     display: grid;
@@ -29,9 +33,39 @@
     background-image: url('../sprite/winScreen.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    color: red;
-    z-index: 2;
+    background-size: 100% 100%;
+    object-fit: contain;
+    color: white;
+    z-index: 1;
+    /*padding:0;
+    margin:0;*/
+    top:0;
+    left:0;
+    
+    font-size: 100px;
+
+    /*width: 100%;
+    height: 100%;*/
+    /*align-items: center;
+    justify-content: center;*/
+}
+
+#mort{
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    background-image: url('../sprite/deathScreen.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    object-fit: contain;
+    color: white;
+    z-index: 1;
+    top:0;
+    left:0;
+    
+    font-size: 100px;
 }
 
 #win{
@@ -50,6 +84,7 @@
 }
 
 body{
+    font-family: "fontWolfenstein";
     min-height: 100vh;
     min-width: 100vw;
     padding: 0;
@@ -58,4 +93,16 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 120%;
+}
+
+/*#buttonMenu{
+    font-family: "fontWolfenstein";
+}
+
+#buttonNiveauSuivant{
+    font-family: "fontWolfenstein";
+}*/
+
+button{
+    font-family: "fontWolfenstein";
 }

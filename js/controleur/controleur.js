@@ -17,6 +17,5 @@ export class Controleur extends Sujet{
     }
 
     get niveau() { return this.#niveau; }
-
-
+    
 }

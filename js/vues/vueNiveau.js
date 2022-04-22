@@ -42,11 +42,22 @@ export class VueNiveau extends Observateur{
                     div.style.backgroundImage = "";
                     div.style.content = "";
                 }
-                
-                div.style.backgroundRepeat = "no-repeat";
-                div.style.backgroundPosition = "center";
-                div.style.backgroundSize = "100%";
+
+                if(this.#controleur.niveau.mapActuelle[i][j].type == "E"){
+                    div.style.backgroundRepeat = "no-repeat";
+                    div.style.backgroundPosition = "center";
+                    div.style.backgroundSize = "60%";
+                    div.style.backgroundSize = "100% 100%";
+                    //div.style.objectFit = "contain";
+                }
+                else{
+                    div.style.backgroundRepeat = "no-repeat";
+                    div.style.backgroundPosition = "center";
+                    div.style.backgroundSize = "100%";
+                }
                 document.getElementById('grille').appendChild(div);
+                
+
             }
         }
     }

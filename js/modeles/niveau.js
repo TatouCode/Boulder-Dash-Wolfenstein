@@ -24,7 +24,7 @@ export class Niveau{
         ["M","T","T","E","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
         ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
         ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","E","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
         ["M","E","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
         ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
         ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
@@ -56,7 +56,7 @@ export class Niveau{
                 let url = "";
                 switch (niveau[i][j]) {
                     case "E":
-                        url = "../.././sprite/enemiShoot.png";
+                        url = "../.././sprite/ennemiShoot.png";
                         let ennemi = new Ennemi(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = ennemi;
                         this.#listeEnnemi.push(ennemi);
@@ -96,6 +96,22 @@ export class Niveau{
     updateJoueur(newCoordonnee){
         let videCoord = new Coordonnee(this.#joueur.coordonnee.x, this.#joueur.coordonnee.y);
         let vide = new Vide(videCoord, "V", "", this);
+        //Gère le cas du déplacement de l'ennemi horizontalement
+        if(this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].type == "E"){
+            let coord;
+            if(newCoordonnee.y - this.#joueur.coordonnee.y > 0){
+                coord = new Coordonnee(this.#mapActuelle[newCoordonnee.x][newCoordonnee.y].coordonnee.x, this.#mapActuelle[newCoordonnee.x][newCoordonnee.y].coordonnee.y + 1);
+            }
+            else{
+                coord = new Coordonnee(this.#mapActuelle[newCoordonnee.x][newCoordonnee.y].coordonnee.x, this.#mapActuelle[newCoordonnee.x][newCoordonnee.y].coordonnee.y - 1);
+            }
+            //let ennemi = new Ennemi(coord, "E", "../.././sprite/enemiShoot.png", this);
+            this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].coordonnee = coord;
+            if(this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].deplacementPossible(coord)){
+                this.#mapActuelle[coord.x][coord.y] = this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y];//ennemi;
+                //this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].coordonnee = coord;
+            }
+        }
         this.#mapActuelle[this.#joueur.coordonnee.x][this.#joueur.coordonnee.y] = vide;
         this.#joueur.coordonnee = newCoordonnee;
         if(this.#mapActuelle[newCoordonnee.x][newCoordonnee.y].type == "D"){
@@ -107,6 +123,9 @@ export class Niveau{
         this.#mapActuelle[newCoordonnee.x][newCoordonnee.y] = this.#joueur;
         this.#listeEnnemi.forEach(ennemi => {
             ennemi.comportement();
+            if(!this.#joueur.enVie){
+                document.getElementById("mort").hidden = false;
+            }
         });
 
         //console.log(this.#mapActuelle);

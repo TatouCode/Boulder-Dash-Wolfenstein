@@ -49,8 +49,6 @@ document.getElementById("buttonCharger").addEventListener('click', function(){
     video3.muted = true;
     video3.autoplay = true;
 
-
-
 });
 
 var video3 = document.getElementById('myVideo3');
