@@ -67,15 +67,15 @@ window.addEventListener("load", () => {
       }, true);
 
     document.getElementById("buttonNiveauSuivant").addEventListener('click', function(){
-        window.location.replace("../niveaux.html");
+        window.location.replace("./niveaux.html");
     });
 
     document.getElementById("buttonrecommence").addEventListener('click', function(){
-        window.location.replace("../niveaux.html");
+        window.location.replace("./niveaux.html");
     });
 
     document.getElementById("buttonMenu").addEventListener('click', function(){
-        window.location.replace("../index.html");
+        window.location.replace("./index.html");
     });
 
 });
