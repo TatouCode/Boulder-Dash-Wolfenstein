@@ -34,7 +34,7 @@ export class VueNiveau extends Observateur{
             for (let j = 0; j < 32; j++) {
                 let div = document.createElement("div");
                 div.classList.add("case");
-                //console.log(this.#controleur.niveau.mapActuelle[i][j].urlSprite);
+                console.log(this.#controleur.niveau.mapActuelle[i][j].urlSprite);
                 if(this.#controleur.niveau.mapActuelle[i][j].type != "V"){
                     div.style.backgroundImage = 'url("'+this.#controleur.niveau.mapActuelle[i][j].urlSprite+'")';
                 }
