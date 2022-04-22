@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
                 comportementEnnemi(positionX, positionY);
-                document.getElementById(position).style.content = 'url(".././sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.content = 'url("./sprite/blazkowiczFace.png")';
                 document.getElementById(position).style.backgroundImage = "";
                 updateScore(positionX, positionY);
             }
@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
                 comportementEnnemi(positionX, positionY);
-                document.getElementById(position).style.content = 'url(".././sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.content = 'url("./sprite/blazkowiczFace.png")';
                 document.getElementById(position).style.backgroundImage = "";
                 updateScore(positionX, positionY);
             }
@@ -92,7 +92,7 @@ window.addEventListener("load", () => {
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
                 comportementEnnemi(positionX, positionY);
-                document.getElementById(position).style.content = 'url(".././sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.content = 'url("./sprite/blazkowiczFace.png")';
                 document.getElementById(position).style.backgroundImage = "";
                 updateScore(positionX, positionY);
             }
@@ -110,7 +110,7 @@ window.addEventListener("load", () => {
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
                 comportementEnnemi(positionX, positionY);
-                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.content = 'url("./sprite/blazkowiczFace.png")';
                 document.getElementById(position).style.backgroundImage = "";
                 updateScore(positionX, positionY);
             }
