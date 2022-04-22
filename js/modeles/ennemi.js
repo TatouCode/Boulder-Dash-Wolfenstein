@@ -36,7 +36,7 @@ export class Ennemi extends Personnage{
 
     deplacementPossible(newCoord){
         let ok = true;
-        if(this.niveau.mapActuelle[newCoord.x][newCoord.y].type == "M" || this.niveau.mapActuelle[newCoord.x][newCoord.y].type == "D"){
+        if(this.niveau.mapActuelle[newCoord.x][newCoord.y].type == "M" || this.niveau.mapActuelle[newCoord.x][newCoord.y].type == "D" || this.niveau.mapActuelle[newCoord.x][newCoord.y].type == "E"){
             ok = false;
         }
         return ok;

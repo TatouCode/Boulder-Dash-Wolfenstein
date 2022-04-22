@@ -18,20 +18,20 @@ export class Niveau{
 
     #niveau1 = [
         ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
-        ["M","T","J","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","E","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","E","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","E","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
-        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","M","M","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","M","M","M","M","M","M","M","M"],
+        ["M","T","T","T","T","T","T","T","T","E","E","E","E","E","E","E","E","T","T","T","T","T","T","M","T","T","T","T","E","T","E","M"],
+        ["M","T","T","T","T","T","T","T","T","E","E","E","E","E","E","E","E","T","T","T","T","T","T","M","T","M","M","M","T","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","E","E","E","E","E","E","E","E","T","T","T","T","T","T","M","T","M","D","M","M","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","E","E","E","E","E","E","E","E","T","T","T","T","T","T","M","T","M","E","M","M","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","E","E","E","E","E","E","E","E","T","T","T","T","T","T","M","T","T","T","M","M","T","T","M"],
+        ["M","M","M","M","M","M","T","T","T","E","E","E","E","E","E","E","E","T","T","T","T","T","T","M","T","M","T","M","M","E","T","M"],
+        ["M","E","T","D","D","M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","M","T","M","M","T","T","M"],
+        ["M","T","T","D","D","M","T","T","T","T","T","T","M","M","M","M","M","M","M","M","M","M","M","M","T","M","T","M","M","T","T","M"],
+        ["M","E","M","M","M","M","M","M","M","M","M","M","M","E","E","E","E","E","E","E","E","E","M","T","T","M","T","M","D","T","T","M"],
+        ["M","T","T","T","T","T","T","T","T","T","T","T","D","T","T","T","T","T","T","T","T","T","T","T","M","M","E","M","M","M","M","M"],
+        ["M","V","T","T","T","T","T","T","T","T","T","T","M","M","M","M","M","M","M","M","M","M","M","M","M","D","T","T","T","T","T","M"],
+        ["M","V","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","D","M","M","M","M","T","T","J","M"],
         ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
         ];
 
@@ -56,19 +56,19 @@ export class Niveau{
                 let url = "";
                 switch (niveau[i][j]) {
                     case "E":
-                        url = "./sprite/ennemiShoot.png";
+                        url = "../../../sprite/ennemiShoot.png";
                         let ennemi = new Ennemi(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = ennemi;
                         this.#listeEnnemi.push(ennemi);
                         break;
                     case "D":
-                        url = "./sprite/cle.png";
+                        url = "../../../sprite/cle.png";
                         let cle = new Cle(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = cle;
                         this.#nbCle += 1;
                         break;
                     case "T":
-                        url = "./sprite/terre.png";
+                        url = "../../../sprite/terre.png";
                         let terre = new Terre(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = terre;
                         break;
@@ -78,12 +78,24 @@ export class Niveau{
                         this.#mapActuelle[i][j] = vide;
                         break;
                     case "M":
-                        url = "./sprite/mur2.png";
+                        let nb = Math.floor(Math.random() * (2 - 0) + 0);
+                        if(nb == 0){
+                            url = "../../../sprite/mur1.png";
+                        }
+                        else if(nb == 1){
+                            url = "../../../sprite/mur2.png";
+                        }
+                        /*else if(nb == 2){
+                            url = "../../../sprite/mur4.png";
+                        }*/
+                        /*else if(nb == 3){
+                            url = "../../../sprite/mur4.png";
+                        }*/
                         let mur = new Mur(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = mur;
                         break;
                     case "J":
-                        url = "./sprite/blazkowiczFace.png";
+                        url = "../../../sprite/blazkowiczFace.png";
                         let joueur = new Hero(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = joueur;
                         this.#joueur = joueur;
