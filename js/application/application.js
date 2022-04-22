@@ -30,7 +30,7 @@ class Application
 
 window.addEventListener("load", () => {
     const app = new Application();
-    document.getElementById(app.vue.joueur.y+";"+app.vue.joueur.x).style.content = 'url(".././sprite/blazkowiczFace.png")';
+    document.getElementById(app.vue.joueur.y+";"+app.vue.joueur.x).style.content = 'url("./sprite/blazkowiczFace.png")';
     
     let position = app.vue.joueur.y+";"+app.vue.joueur.x
     let positionY = app.vue.joueur.y
@@ -182,7 +182,7 @@ window.addEventListener("load", () => {
                     while(map[parseInt(ennemiY)+1][ennemiX] == "V"){
                         if((ennemiY == positionJoueurY)&&(positionJoueurX == ennemiX)){
                             //Partie terminé
-                            window.location.replace("../niveaux.html");
+                            window.location.replace("./niveaux.html");
                         }
                         ennemiY = parseInt(ennemiY)+1;
                     }
@@ -194,7 +194,7 @@ window.addEventListener("load", () => {
                     }
                     map[ennemiY][ennemiX] = "V";
                     ennemiY = parseInt(ennemiY)+1;
-                    window.location.replace("../niveaux.html");
+                    window.location.replace("./niveaux.html");
                 }
                 map[ennemiY][ennemiX] = "E";
 
@@ -215,7 +215,7 @@ window.addEventListener("load", () => {
         localStorage.setItem('positionEnnemi', app.vue.positionEnnemi);
         localStorage.setItem('joueurX', app.vue.joueur.x);
         localStorage.setItem('joueurY', app.vue.joueur.y);
-        window.location.replace("../index.html");
+        window.location.replace("./index.html");
     });
 
 })
