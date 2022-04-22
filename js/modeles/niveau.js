@@ -56,19 +56,19 @@ export class Niveau{
                 let url = "";
                 switch (niveau[i][j]) {
                     case "E":
-                        url = ".././sprite/ennemiShoot.png";
+                        url = "./sprite/ennemiShoot.png";
                         let ennemi = new Ennemi(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = ennemi;
                         this.#listeEnnemi.push(ennemi);
                         break;
                     case "D":
-                        url = ".././sprite/cle.png";
+                        url = "./sprite/cle.png";
                         let cle = new Cle(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = cle;
                         this.#nbCle += 1;
                         break;
                     case "T":
-                        url = ".././sprite/terre.png";
+                        url = "./sprite/terre.png";
                         let terre = new Terre(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = terre;
                         break;
@@ -80,10 +80,10 @@ export class Niveau{
                     case "M":
                         let nb = Math.floor(Math.random() * (2 - 0) + 0);
                         if(nb == 0){
-                            url = ".././sprite/mur1.png";
+                            url = "./sprite/mur1.png";
                         }
                         else if(nb == 1){
-                            url = ".././sprite/mur2.png";
+                            url = "./sprite/mur2.png";
                         }
                         /*else if(nb == 2){
                             url = "../../../sprite/mur4.png";
@@ -95,7 +95,7 @@ export class Niveau{
                         this.#mapActuelle[i][j] = mur;
                         break;
                     case "J":
-                        url = ".././sprite/blazkowicz.png";
+                        url = "./sprite/blazkowicz.png";
                         let joueur = new Hero(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = joueur;
                         this.#joueur = joueur;
@@ -129,13 +129,13 @@ export class Niveau{
         }
         console.log(direction);
         if(direction == "gauche"){
-            this.#joueur.urlSprite = ".././sprite/blazkowiczGauche.png";
+            this.#joueur.urlSprite = "./sprite/blazkowiczGauche.png";
         }
         else if(direction == "droite"){
-            this.#joueur.urlSprite = ".././sprite/blazkowiczDroite.png";
+            this.#joueur.urlSprite = "./sprite/blazkowiczDroite.png";
         }
         else{
-            this.#joueur.urlSprite = ".././sprite/blazkowicz.png";
+            this.#joueur.urlSprite = "./sprite/blazkowicz.png";
         }
         this.#mapActuelle[this.#joueur.coordonnee.x][this.#joueur.coordonnee.y] = vide;
         this.#joueur.coordonnee = newCoordonnee;
