@@ -30,7 +30,7 @@ class Application
 
 window.addEventListener("load", () => {
     const app = new Application();
-    document.getElementById(app.vue.joueur.y+";"+app.vue.joueur.x).style.content = 'url("../../sprite/blazkowiczFace.png")';
+    document.getElementById(app.vue.joueur.y+";"+app.vue.joueur.x).style.content = 'url(".././sprite/blazkowiczFace.png")';
     
     let position = app.vue.joueur.y+";"+app.vue.joueur.x
     let positionY = app.vue.joueur.y
@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
                 comportementEnnemi(positionX, positionY);
-                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.content = 'url(".././sprite/blazkowiczFace.png")';
                 document.getElementById(position).style.backgroundImage = "";
                 updateScore(positionX, positionY);
             }
@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
                 comportementEnnemi(positionX, positionY);
-                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.content = 'url(".././sprite/blazkowiczFace.png")';
                 document.getElementById(position).style.backgroundImage = "";
                 updateScore(positionX, positionY);
             }
@@ -92,7 +92,7 @@ window.addEventListener("load", () => {
                 app.vue.joueur.x = positionX;
                 app.vue.joueur.y = positionY;
                 comportementEnnemi(positionX, positionY);
-                document.getElementById(position).style.content = 'url("../sprite/blazkowiczFace.png")';
+                document.getElementById(position).style.content = 'url(".././sprite/blazkowiczFace.png")';
                 document.getElementById(position).style.backgroundImage = "";
                 updateScore(positionX, positionY);
             }
