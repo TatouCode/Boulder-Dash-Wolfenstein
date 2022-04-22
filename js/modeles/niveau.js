@@ -56,19 +56,19 @@ export class Niveau{
                 let url = "";
                 switch (niveau[i][j]) {
                     case "E":
-                        url = "../../../sprite/ennemiShoot.png";
+                        url = "./sprite/ennemiShoot.png";
                         let ennemi = new Ennemi(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = ennemi;
                         this.#listeEnnemi.push(ennemi);
                         break;
                     case "D":
-                        url = "../../../sprite/cle.png";
+                        url = "./sprite/cle.png";
                         let cle = new Cle(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = cle;
                         this.#nbCle += 1;
                         break;
                     case "T":
-                        url = "../../../sprite/terre.png";
+                        url = "./sprite/terre.png";
                         let terre = new Terre(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = terre;
                         break;
@@ -78,12 +78,12 @@ export class Niveau{
                         this.#mapActuelle[i][j] = vide;
                         break;
                     case "M":
-                        url = "../../../sprite/mur2.png";
+                        url = "./sprite/mur2.png";
                         let mur = new Mur(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = mur;
                         break;
                     case "J":
-                        url = "../../../sprite/blazkowiczFace.png";
+                        url = "./sprite/blazkowiczFace.png";
                         let joueur = new Hero(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = joueur;
                         this.#joueur = joueur;
