@@ -43,7 +43,7 @@ export class VueNiveau extends Observateur{
                     div.style.content = "";
                 }
 
-                if(this.#controleur.niveau.mapActuelle[i][j].type == "E"){
+                if(this.#controleur.niveau.mapActuelle[i][j].type == "E" || this.#controleur.niveau.mapActuelle[i][j].type == "J"){
                     div.style.backgroundRepeat = "no-repeat";
                     div.style.backgroundPosition = "center";
                     div.style.backgroundSize = "60%";
