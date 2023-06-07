@@ -10,8 +10,16 @@ export class VueNiveau extends Observateur{
         this.#controleur = controleur;
         this.#controleur.ajouteObserbateur(this);
 
-        this.#controleur.nouvellePartie();
-
+        if(localStorage.getItem('chargeNiveau') != null && localStorage.getItem('sauvegarde') != null){
+            console.log(JSON.parse(localStorage.getItem('sauvegarde')));
+            this.#controleur.chargeNiveau(JSON.parse(localStorage.getItem('sauvegarde')));
+            //console.log(localStorage.getItem('sauvegarde'));
+            localStorage.removeItem('chargeNiveau');
+        }
+        else{
+            this.#controleur.nouvellePartie();
+        }
+        
         this.update();
 
         
@@ -21,6 +29,10 @@ export class VueNiveau extends Observateur{
     update(){
         this.afficheGrille();
         this.updateScore();
+        //console.log(this.#controleur.niveau.mapActuelle);
+        //console.log(JSON.parse(localStorage.getItem('sauvegarde')));
+        //console.log("je suis la");
+        //localStorage.clear();
     }
 
     afficheGrille(){
@@ -70,7 +82,7 @@ export class VueNiveau extends Observateur{
     }
 
     updateScore(){
-        document.getElementById("score").innerHTML = "Score : "+this.#controleur.niveau.nbCle;
+        document.getElementById("score").innerHTML = "Cle a recuperer : "+this.#controleur.niveau.nbCle;
     }
 
     get controleur() { return this.#controleur; }

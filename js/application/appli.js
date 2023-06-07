@@ -60,6 +60,7 @@ window.addEventListener("load", () => {
         // Annuler l'action par défaut pour éviter qu'elle ne soit traitée deux fois.
         event.preventDefault();
         if(app.controleur.niveau.joueur.deplacementPossible(newCoord)){
+            //console.log(newCoord);
             app.controleur.niveau.updateJoueur(newCoord);
             app.controleur.notifier();
         }
@@ -67,15 +68,31 @@ window.addEventListener("load", () => {
       }, true);
 
     document.getElementById("buttonNiveauSuivant").addEventListener('click', function(){
-        window.location.replace("niveaux.html");
+        //window.location.replace("niveaux.html");
+        var niveau = localStorage.getItem('niveau');
+        console.log(parseInt(niveau)+1);
+        app.controleur.niveauSuivant(parseInt(niveau)+1);
+        document.getElementById("niveauTermine").hidden = true;
+        //app.controleur.notifier();
+        //window.location.replace("niveaux.html");
+
     });
 
     document.getElementById("buttonrecommence").addEventListener('click', function(){
         window.location.replace("niveaux.html");
     });
 
+    document.getElementById("buttonSauvegarde").addEventListener('click', function(){
+      //localStorage.removeItem('niveau');
+      app.controleur.sauvegarde();
+      //window.location.replace("niveaux.html");
+      //window.location.replace("./index.html");
+  });
+
     document.getElementById("buttonMenu").addEventListener('click', function(){
-        window.location.replace("./index.html");
+        localStorage.removeItem('niveau');
+        window.location.replace("niveaux.html");
+        //window.location.replace("./index.html");
     });
 
 });

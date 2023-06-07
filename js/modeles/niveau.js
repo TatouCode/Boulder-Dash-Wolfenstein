@@ -35,21 +35,73 @@ export class Niveau{
         ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
         ];
 
+        #niveau2 = [
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
+            ["M","M","M","M","M","M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","M","M","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","M","M","M","M","M","M","M","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","T","T","T","E","T","E","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","M","M","T","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","D","M","M","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","E","M","M","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","T","T","M","M","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","T","M","M","E","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","T","M","M","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","M","T","M","M","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","E","E","E","E","M","T","T","M","T","M","D","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","T","M","M","E","M","M","M","M","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","D","T","T","T","T","T","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","D","M","M","M","M","T","T","J","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
+            ];
+
+        #niveau3 = [
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","T","T","T","T","T","T","T","T","T","T","T","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","M","M","M","M","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","T","T","T","E","T","E","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","M","M","T","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","D","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","E","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","T","T","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","T","M","M","E","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","T","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","M","M","M","M","M","M","T","M","T","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","E","E","E","E","M","T","T","M","T","M","D","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","T","M","M","E","M","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","M","M","M","M","M","M","M","D","T","T","T","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","D","M","M","M","M","T","T","J","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
+            ];
+    
+    #mapNiveaux = Array();
+    #mapSauvegarde = Array();
+
     //#listePersonnage;
 
     constructor(map){
         //this.#map = map;
         this.#mapActuelle  = Array.from(Array(16), () => new Array(32));
         this.#listeEnnemi = [];
+        this.#mapNiveaux.push(this.#niveau1);
+        this.#mapNiveaux.push(this.#niveau2);
+        this.#mapNiveaux.push(this.#niveau3);
         //initialiseMap(this.#niveau1);
         //this.nouvellePartie();
     }
 
     nouvellePartie(){
-        this.initialiseMap(this.#niveau1);
+        //console.log(this.#mapNiveaux);
+        this.initialiseMap(this.#mapNiveaux[0]);
+        this.#mapSauvegarde = this.#mapNiveaux[0];
+    }
+
+    niveauSuivant(numeroNiveau){
+        this.initialiseMap(this.#mapNiveaux[numeroNiveau]);
+        this.#mapSauvegarde = this.#mapNiveaux[numeroNiveau];
     }
 
     initialiseMap(niveau){
+        //console.log(niveau);
         for (var i = 0; i < 16; i++){
             for (var j = 0; j < 32; j++){
                 let coordonnee = new Coordonnee(i, j);
@@ -65,7 +117,8 @@ export class Niveau{
                         url = "./sprite/cle.png";
                         let cle = new Cle(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = cle;
-                        this.#nbCle += 1;
+                        //////////////////////
+                        this.#nbCle = 1;
                         break;
                     case "T":
                         url = "./sprite/terre.png";
@@ -163,6 +216,7 @@ export class Niveau{
     get mapActuelle() { return this.#mapActuelle; }
     get joueur() { return this.#joueur; }
     get nbCle() { return this.#nbCle; }
+    get mapSauvegarde() { return this.#mapSauvegarde; }
 
     set joueur(joueur) { this.#joueur = joueur;}
 

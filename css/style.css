@@ -52,6 +52,24 @@
     justify-content: center;*/
 }
 
+#buttonNiveauSuivant{
+    font-family: "fontWolfenstein";
+    font-size: 100px;
+    background-color: transparent;
+    /*border: none;*/
+    overflow: hidden;
+    outline: none;
+    /*color: rgb(254, 254, 14);*/
+    display: flex;
+    transform: translate(+150%, 0%);
+    background-color: transparent;
+    /*border: none;*/
+    border-color: black;
+}
+#buttonNiveauSuivant:hover{
+    color: white;
+}
+
 #mort{
     position: fixed;
     min-height: 100vh;
@@ -138,6 +156,10 @@ body{
     font-size: 50px;
     padding: 0;
     margin: 0;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
     /*min-height: 100vh;
     min-width: 100vw;
     font-size: 50px;*/
@@ -145,6 +167,22 @@ body{
     border: none;
     overflow: hidden;
     outline: none;*/
+}
+
+#divSauvegarde{
+    text-align:center;
+    margin-top: auto;
+}
+#buttonSauvegarde{
+    font-family: "fontWolfenstein";
+    font-size: 50px;
+    background-color: transparent;
+    border-color: black;
+    overflow: hidden;
+    outline: none;
+}
+#buttonSauvegarde:hover{
+    color: white;
 }
 
 #divButtonMenu{
@@ -156,7 +194,8 @@ body{
     font-family: "fontWolfenstein";
     font-size: 50px;
     background-color: transparent;
-    border: none;
+    /*border: none;*/
+    border-color: black;
     overflow: hidden;
     outline: none;
 }
@@ -164,6 +203,22 @@ body{
 #buttonMenu:hover{
     color: white;
 }
+
+#divTexte{
+    text-align:center;
+    margin-top: 0;
+}
+
+#evasion{
+    font-family: "fontWolfenstein";
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    text-decoration: underline black;
+}
+
 
 #buttonNiveauSuivant{
     font-family: "fontWolfenstein";

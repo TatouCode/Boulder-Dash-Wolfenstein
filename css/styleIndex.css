@@ -3,17 +3,17 @@
     src: url("../font/wolfenstein.ttf");
 }
 
-#buttonJouer, #buttonCharger, #buttonVotreEvasion{
+#buttonJouer, #buttonCharger, #buttonVotreEvasion, #buttonEffacer{
 
     font-family: "fontWolfenstein";
     font-size: 50px;
     background-color: transparent;
-    border: none;
+    border-color: black;
     overflow: hidden;
     outline: none;
 }
 
-#buttonJouer:hover, #buttonCharger:hover, #buttonVotreEvasion:hover{
+#buttonJouer:hover, #buttonCharger:hover, #buttonVotreEvasion:hover, #buttonEffacer:hover{
     color: white;
 }
 
@@ -54,14 +54,15 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.content {
+#idContent {
     text-align: center;
-    width: 300px;
+    width: 500px;
     height: 500px;
     position: fixed;
     top: 50%;
-    left: 40%;
+    left: 35%;
     color: #f1f1f1;
   }
+
 
 

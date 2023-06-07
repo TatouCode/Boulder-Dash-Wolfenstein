@@ -12,7 +12,56 @@ export class Controleur extends Sujet{
     }
 
     nouvellePartie(){
-        this.#niveau.nouvellePartie();
+        if(localStorage.getItem('niveau') != null){
+            localStorage.setItem('niveau', localStorage.getItem('niveau'));
+            this.#niveau.niveauSuivant(parseInt(localStorage.getItem('niveau')));
+        }
+        else{
+            localStorage.setItem('niveau', '0');
+            this.#niveau.nouvellePartie();
+        }
+        this.notifier();
+    }
+
+    niveauSuivant(numeroNiveau){
+        this.#niveau.niveauSuivant(numeroNiveau);
+        localStorage.setItem('niveau', numeroNiveau);
+        this.notifier();
+    }
+
+    sauvegarde(){
+        //console.log(this.#niveau.mapActuelle);
+        let niveauSauvegarde = [
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","T","T","T","T","T","T","T","T","T","T","T","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","M","M","M","M","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","T","T","T","E","T","E","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","M","M","T","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","D","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","E","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","T","T","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","T","M","M","E","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","T","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","M","M","M","M","M","M","T","M","T","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","E","E","E","E","M","T","T","M","T","M","D","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","T","M","M","E","M","M","M","M","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","M","M","M","M","M","M","M","D","T","T","T","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","D","M","M","M","M","T","T","J","M"],
+            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
+            ];
+        for (var i = 0; i < 16; i++){
+            for (var j = 0; j < 32; j++){
+                niveauSauvegarde[i][j] = this.#niveau.mapActuelle[i][j].type;
+            }
+        }
+        //console.log(this.#niveau.mapActuelle);
+        //console.log(niveauSauvegarde);
+        localStorage.setItem('sauvegarde', JSON.stringify(niveauSauvegarde));
+    }
+
+    chargeNiveau(niveauCharge){
+        //console.log(niveauCharge);
+        this.#niveau.initialiseMap(niveauCharge);
         this.notifier();
     }
 

@@ -38,6 +38,7 @@ document.getElementById("buttonJouer").addEventListener('click', function(){
  * Lance la troisième vidéo quand le joueur clique sur le bouton charger
  */
 document.getElementById("buttonCharger").addEventListener('click', function(){
+    localStorage.setItem('chargeNiveau', true);
     document.getElementById('idContent').hidden = true;
     var video2 = document.getElementById('myVideo2');
     video2.loop = false;
@@ -55,3 +56,8 @@ var video3 = document.getElementById('myVideo3');
 video3.addEventListener('ended', function(){
     window.location.replace("./niveaux.html");
 })
+
+document.getElementById("buttonEffacer").addEventListener('click', function(){
+    localStorage.removeItem('sauvegarde');
+
+});
