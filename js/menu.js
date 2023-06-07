@@ -6,7 +6,6 @@
  */
 var videoDebut = document.getElementById('myVideo1');
 videoDebut.addEventListener('ended', function(){
-    console.log("fini");
     var video = document.getElementById('myVideo2');
     video.hidden = false;
     video.muted = true;
