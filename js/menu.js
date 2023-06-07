@@ -13,6 +13,7 @@ videoDebut.addEventListener('ended', function(){
     video.autoplay = true;
     video.loop = true;
     document.getElementById('idContent').hidden = false;
+    document.getElementById('titre').hidden = false;
 
   });
 
@@ -21,6 +22,7 @@ videoDebut.addEventListener('ended', function(){
  */
 document.getElementById("buttonJouer").addEventListener('click', function(){
     document.getElementById('idContent').hidden = true;
+    document.getElementById('titre').hidden = true;
     var video2 = document.getElementById('myVideo2');
     video2.loop = false;
     video2.autoplay = false;
@@ -40,6 +42,7 @@ document.getElementById("buttonJouer").addEventListener('click', function(){
 document.getElementById("buttonCharger").addEventListener('click', function(){
     localStorage.setItem('chargeNiveau', true);
     document.getElementById('idContent').hidden = true;
+    document.getElementById('titre').hidden = true;
     var video2 = document.getElementById('myVideo2');
     video2.loop = false;
     video2.autoplay = false;

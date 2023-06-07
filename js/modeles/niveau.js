@@ -102,6 +102,7 @@ export class Niveau{
 
     initialiseMap(niveau){
         //console.log(niveau);
+        //localStorage.setItem('niveau', parseInt(localStorage.getItem('niveau'))+1);
         for (var i = 0; i < 16; i++){
             for (var j = 0; j < 32; j++){
                 let coordonnee = new Coordonnee(i, j);
@@ -118,7 +119,7 @@ export class Niveau{
                         let cle = new Cle(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = cle;
                         //////////////////////
-                        this.#nbCle = 1;
+                        this.#nbCle += 1;
                         break;
                     case "T":
                         url = "./sprite/terre.png";
@@ -138,6 +139,9 @@ export class Niveau{
                         else if(nb == 1){
                             url = "./sprite/mur2.png";
                         }
+                        /*else if(nb == 3){
+                            url = "./sprite/mur4.png";
+                        }*/
                         /*else if(nb == 2){
                             url = "../../../sprite/mur4.png";
                         }*/
@@ -195,7 +199,19 @@ export class Niveau{
         if(this.#mapActuelle[newCoordonnee.x][newCoordonnee.y].type == "D"){
             this.#nbCle -= 1;
             if(this.#nbCle == 0){
-                document.getElementById("niveauTermine").hidden = false;
+                if(parseInt(localStorage.getItem('niveau'))+1 > 2){
+                    document.getElementById("divFinJeu").hidden = false;
+                }
+                else{
+                    document.getElementById("niveauTermine").hidden = false;
+                    localStorage.setItem('niveau', parseInt(localStorage.getItem('niveau'))+1);
+                }
+                //document.getElementById("niveauTermine").hidden = false;
+                //localStorage.setItem('niveau', parseInt(localStorage.getItem('niveau'))+1);
+                //if(parseInt(localStorage.getItem('niveau')) > 2){
+                //document.getElementById("finJeu").hidden = false;
+                //document.getElementById("niveauTermine").hidden = true;
+                  
             }
         }
         this.#mapActuelle[newCoordonnee.x][newCoordonnee.y] = this.#joueur;

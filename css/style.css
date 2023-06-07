@@ -51,7 +51,6 @@
     /*align-items: center;
     justify-content: center;*/
 }
-
 #buttonNiveauSuivant{
     font-family: "fontWolfenstein";
     font-size: 100px;
@@ -69,6 +68,45 @@
 #buttonNiveauSuivant:hover{
     color: white;
 }
+
+#divFinJeu{
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    background-image: url('../sprite/endScreen.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    object-fit: contain;
+    color: white;
+    z-index: 1;
+    /*padding:0;
+    margin:0;*/
+    top:0;
+    left:0;
+    
+    font-size: 100px;
+}
+#finJeu{
+    font-family: "fontWolfenstein";
+    font-size: 100px;
+    background-color: transparent;
+    /*border: none;*/
+    overflow: hidden;
+    outline: none;
+    /*color: rgb(254, 254, 14);*/
+    display: flex;
+    transform: translate(+100%, 270%);
+    background-color: transparent;
+    /*border: none;*/
+    border-color: black;
+}
+#finJeu:hover{
+    color: white;
+}
+
+
 
 #mort{
     position: fixed;
@@ -182,6 +220,22 @@ body{
     outline: none;
 }
 #buttonSauvegarde:hover{
+    color: white;
+}
+
+#divReinitialiser{
+    text-align:center;
+    margin-top: auto;
+}
+#buttonReinitialiser{
+    font-family: "fontWolfenstein";
+    font-size: 50px;
+    background-color: transparent;
+    border-color: black;
+    overflow: hidden;
+    outline: none;
+}
+#buttonReinitialiser:hover{
     color: white;
 }
 

@@ -25,7 +25,7 @@ export class Controleur extends Sujet{
 
     niveauSuivant(numeroNiveau){
         this.#niveau.niveauSuivant(numeroNiveau);
-        localStorage.setItem('niveau', numeroNiveau);
+        //localStorage.setItem('niveau', numeroNiveau);
         this.notifier();
     }
 

@@ -13,6 +13,16 @@
     outline: none;
 }
 
+#buttontitre{
+    font-family: "fontWolfenstein";
+    font-size: 75px;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+
 #buttonJouer:hover, #buttonCharger:hover, #buttonVotreEvasion:hover, #buttonEffacer:hover{
     color: white;
 }
@@ -62,7 +72,18 @@ body{
     top: 50%;
     left: 35%;
     color: #f1f1f1;
-  }
+}
+
+#titre{
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 0%;
+    left: 35%;
+    color: #f1f1f1;
+}
+
 
 
 
