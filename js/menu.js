@@ -2,7 +2,7 @@
 
 
 /**
- * Lance la première vidéo
+ * Quand la première vidéo est terminée lance la deuxième
  */
 var videoDebut = document.getElementById('myVideo1');
 videoDebut.addEventListener('ended', function(){
@@ -17,7 +17,7 @@ videoDebut.addEventListener('ended', function(){
   });
 
 /**
- * Lance la 2e vidéo
+ * Lance la troisième vidéo quand le joueur clique sur le bouton jouer
  */
 document.getElementById("buttonJouer").addEventListener('click', function(){
     document.getElementById('idContent').hidden = true;
@@ -35,7 +35,7 @@ document.getElementById("buttonJouer").addEventListener('click', function(){
 });
 
 /**
- * Lance la 3é video
+ * Lance la troisième vidéo quand le joueur clique sur le bouton charger
  */
 document.getElementById("buttonCharger").addEventListener('click', function(){
     document.getElementById('idContent').hidden = true;

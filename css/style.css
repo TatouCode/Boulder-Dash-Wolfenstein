@@ -6,24 +6,26 @@
 #grille{
     display: grid;
     overflow: hidden;
-    height: 505px;
-    width: 960px;
+    height: 100%;
+    width: 100%;
+    /*height: 505px;
+    width: 960px;*/
     grid-template-columns: repeat(32, 30px);
-    position: fixed;
-    top: 50%;
+    /*position: fixed;*/
+    /*top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url("../sprite/chateauWolfenstein.png");
+    transform: translate(-30%, -50%);*/
+    /*background-image: url("../sprite/chateauWolfenstein.png");*/
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    background-color: brown;
+    /*background-position: center;
+    background-size: 100%;*/
+    background-color: black;
 
 }
 
-#Score{
+/*#Score{
     color: red;
-}
+}*/
 
 #niveauTermine{
     position: fixed;
@@ -75,12 +77,30 @@
     z-index: 3;
 }
 
+/*#mur{
+    transform: scale(1.2);
+}*/
+
 .case{
-    border: 1px solid;
-    height: 30px;
-    width: 30px;
-    padding: 0;
-    margin: 0;
+    /*background-size: contain;*/
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    /*border: 1px solid;*/
+    /*height: 100%;
+    width: 100%;*/
+    /*/height: 30px;
+    width: 30px;*/
+    /*height: 30px;
+    width: 30px;*/
+    /*padding: 0;
+    margin: 0;*/
+    /*line-height: 0;
+    background-position: -100% 0;
+    background-size: cover;*/
+    /*background-size: 25px 20px;
+    background-position: 25px 20px;*/
+    /*transform: scale(2);*/
 }
 
 body{
@@ -89,20 +109,76 @@ body{
     min-width: 100vw;
     padding: 0;
     margin: 0;
-    background-image: url("../sprite/fond.png");
+    /*background-image: url("../sprite/fond.png");*/
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 120%;
+    /*background-size: 120%;*/
 }
 
-/*#buttonMenu{
+#coteGauche{
+    flex-basis: 45%;
+    background-color: rgb(167, 23, 32);
+    display: flex;
+    flex-direction: column;
+}
+
+#coteDroit{
+    flex-basis: 55%;
+}
+
+#divScore{
+    text-align:center;
+    margin-top: auto;
+    /*padding: 0;
+    margin-top: 0;*/
+}
+
+#score{
     font-family: "fontWolfenstein";
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    /*min-height: 100vh;
+    min-width: 100vw;
+    font-size: 50px;*/
+    /*background-color: transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;*/
+}
+
+#divButtonMenu{
+    text-align:center;
+    margin-top: auto;
+}
+
+#buttonMenu{
+    font-family: "fontWolfenstein";
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+
+#buttonMenu:hover{
+    color: white;
 }
 
 #buttonNiveauSuivant{
     font-family: "fontWolfenstein";
-}*/
+}
 
 button{
     font-family: "fontWolfenstein";
 }
+
+#niveau{
+    display: flex;
+    min-height: 100vh;
+}
+
+#niveau > div {
+    flex-grow: 1;
+  }
+
