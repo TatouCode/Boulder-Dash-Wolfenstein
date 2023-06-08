@@ -16,11 +16,11 @@ export class Hero extends Personnage{
             ok = false;
         }
         //Le joueur ne peut déplacer les ennemies verticalement
-        if(this.niveau.mapActuelle[newCoord.x][this.coordonnee.y].type == "E"){
+        if(this.niveau.mapActuelle[newCoord.x][this.coordonnee.y].type == "E" || this.niveau.mapActuelle[newCoord.x][this.coordonnee.y].type == "L"){
             ok = false;
         }
         //Le joueur peut déplacer les ennemies horizontalement
-        if(this.niveau.mapActuelle[this.coordonnee.x][newCoord.y].type == "E"){
+        if(this.niveau.mapActuelle[this.coordonnee.x][newCoord.y].type == "E" || this.niveau.mapActuelle[this.coordonnee.x][newCoord.y].type == "L"){
             let coord;
             if(newCoord.y - this.coordonnee.y > 0){
                 coord = new Coordonnee(newCoord.x, newCoord.y + 1);

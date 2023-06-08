@@ -25,12 +25,10 @@ export class Controleur extends Sujet{
 
     niveauSuivant(numeroNiveau){
         this.#niveau.niveauSuivant(numeroNiveau);
-        //localStorage.setItem('niveau', numeroNiveau);
         this.notifier();
     }
 
     sauvegarde(){
-        //console.log(this.#niveau.mapActuelle);
         let niveauSauvegarde = [
             ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","T","T","T","T","T","T","T","T","T","T","T","M","M","M","M"],
@@ -54,13 +52,10 @@ export class Controleur extends Sujet{
                 niveauSauvegarde[i][j] = this.#niveau.mapActuelle[i][j].type;
             }
         }
-        //console.log(this.#niveau.mapActuelle);
-        //console.log(niveauSauvegarde);
         localStorage.setItem('sauvegarde', JSON.stringify(niveauSauvegarde));
     }
 
     chargeNiveau(niveauCharge){
-        //console.log(niveauCharge);
         this.#niveau.initialiseMap(niveauCharge);
         this.notifier();
     }

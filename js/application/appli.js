@@ -68,33 +68,25 @@ window.addEventListener("load", () => {
       }, true);
 
     document.getElementById("buttonNiveauSuivant").addEventListener('click', function(){
-        //window.location.replace("niveaux.html");
-        var niveau = localStorage.getItem('niveau');
-        //console.log(parseInt(niveau)+1);
-        
-        //else{
-          app.controleur.niveauSuivant(parseInt(niveau));
-          document.getElementById("niveauTermine").hidden = true;
-        //}
-        //app.controleur.notifier();
-        //window.location.replace("niveaux.html");
-
+      window.location.replace("niveaux.html");
+      var niveau = localStorage.getItem('niveau');        
+      app.controleur.niveauSuivant(parseInt(niveau));
+      document.getElementById("niveauTermine").hidden = true;
     });
 
     document.getElementById("buttonrecommence").addEventListener('click', function(){
-        window.location.replace("niveaux.html");
+      var niveau = localStorage.getItem('niveau');
+      app.controleur.niveauSuivant(parseInt(niveau));
+      document.getElementById("mort").hidden = true;
     });
 
     document.getElementById("buttonSauvegarde").addEventListener('click', function(){
-      //localStorage.removeItem('niveau');
       app.controleur.sauvegarde();
-      //window.location.replace("niveaux.html");
-      //window.location.replace("./index.html");
   });
 
     document.getElementById("buttonMenu").addEventListener('click', function(){
-        localStorage.removeItem('niveau');
-        window.location.replace("./index.html");
+      localStorage.removeItem('niveau');
+      window.location.replace("./index.html");
     });
 
     document.getElementById("finJeu").addEventListener('click', function(){

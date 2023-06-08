@@ -1,4 +1,5 @@
 import { Ennemi } from "../modeles/ennemi.js";
+import { EnnemiLourd } from "../modeles/ennemiLourd.js";
 import { Hero } from "../modeles/hero.js";
 import { Mur } from "./mur.js";
 import { Cle } from "../modeles/cle.js";
@@ -37,20 +38,20 @@ export class Niveau{
 
         #niveau2 = [
             ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"],
-            ["M","M","M","M","M","M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","M","M","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","M","M","M","M","M","M","M","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","T","T","T","E","T","E","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","M","M","T","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","D","M","M","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","E","M","M","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","T","T","M","M","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","T","M","M","E","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","M","T","M","T","M","M","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","M","T","M","M","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","E","E","E","E","M","T","T","M","T","M","D","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","T","M","M","E","M","M","M","M","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","D","T","T","T","T","T","M"],
-            ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","T","T","T","T","T","D","M","M","M","M","T","T","J","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","M","M","T","T","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","D","M","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","L","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","E","T","E","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","T","D","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","L","T","L","T","E","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","E","T","T","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","D","T","T","T","M","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","T","T","M","T","M"],
+            ["M","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","M","T","T","T","M","J","M"],
             ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
             ];
 
@@ -60,37 +61,31 @@ export class Niveau{
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","M","M","M","M","M","M","M","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","T","T","T","E","T","E","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","M","M","T","T","T","M"],
-            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","D","M","M","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","M","M","M","T","T","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","E","M","M","T","T","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","T","T","M","M","T","T","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","T","M","M","E","T","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","T","M","T","M","M","T","T","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","M","M","M","M","M","M","T","M","T","M","M","T","T","M"],
-            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","E","E","E","E","M","T","T","M","T","M","D","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","E","E","E","E","M","T","T","M","T","M","M","T","T","M"],
             ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","T","M","M","E","M","M","M","M","M"],
-            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","M","M","M","M","M","M","M","D","T","T","T","T","T","M"],
-            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","D","M","M","M","M","T","T","J","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","M","M","M","M","M","M","M","M","D","T","T","T","T","M"],
+            ["M","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","E","M","T","T","T","T","T","M","M","M","M","M","T","T","J","M"],
             ["M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M","M"]
             ];
     
     #mapNiveaux = Array();
     #mapSauvegarde = Array();
 
-    //#listePersonnage;
-
-    constructor(map){
-        //this.#map = map;
+    constructor(){
         this.#mapActuelle  = Array.from(Array(16), () => new Array(32));
         this.#listeEnnemi = [];
         this.#mapNiveaux.push(this.#niveau1);
         this.#mapNiveaux.push(this.#niveau2);
         this.#mapNiveaux.push(this.#niveau3);
-        //initialiseMap(this.#niveau1);
-        //this.nouvellePartie();
     }
 
     nouvellePartie(){
-        //console.log(this.#mapNiveaux);
         this.initialiseMap(this.#mapNiveaux[0]);
         this.#mapSauvegarde = this.#mapNiveaux[0];
     }
@@ -101,8 +96,6 @@ export class Niveau{
     }
 
     initialiseMap(niveau){
-        //console.log(niveau);
-        //localStorage.setItem('niveau', parseInt(localStorage.getItem('niveau'))+1);
         for (var i = 0; i < 16; i++){
             for (var j = 0; j < 32; j++){
                 let coordonnee = new Coordonnee(i, j);
@@ -114,11 +107,16 @@ export class Niveau{
                         this.#mapActuelle[i][j] = ennemi;
                         this.#listeEnnemi.push(ennemi);
                         break;
+                    case "L":
+                        url = "./sprite/Hans.png";
+                        let lourd = new EnnemiLourd(coordonnee, niveau[i][j], url, this);
+                        this.#mapActuelle[i][j] = lourd;
+                        this.#listeEnnemi.push(lourd);
+                        break;
                     case "D":
                         url = "./sprite/cle.png";
                         let cle = new Cle(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = cle;
-                        //////////////////////
                         this.#nbCle += 1;
                         break;
                     case "T":
@@ -139,15 +137,6 @@ export class Niveau{
                         else if(nb == 1){
                             url = "./sprite/mur2.png";
                         }
-                        /*else if(nb == 3){
-                            url = "./sprite/mur4.png";
-                        }*/
-                        /*else if(nb == 2){
-                            url = "../../../sprite/mur4.png";
-                        }*/
-                        /*else if(nb == 3){
-                            url = "../../../sprite/mur4.png";
-                        }*/
                         let mur = new Mur(coordonnee, niveau[i][j], url, this);
                         this.#mapActuelle[i][j] = mur;
                         break;
@@ -159,7 +148,7 @@ export class Niveau{
                 };
             }
         }
-        //console.log(this.#mapActuelle);
+        localStorage.setItem('sauvegarde', JSON.stringify(this.#mapActuelle));
     }
 
     updateJoueur(newCoordonnee){
@@ -176,15 +165,12 @@ export class Niveau{
             direction = "gauche";
         }
         //Gère le cas du déplacement de l'ennemi horizontalement
-        if(this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].type == "E"){
-            //let ennemi = new Ennemi(coord, "E", "../.././sprite/enemiShoot.png", this);
+        if(this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].type == "E" || this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].type == "L"){
             this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].coordonnee = coord;
             if(this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].deplacementPossible(coord)){
                 this.#mapActuelle[coord.x][coord.y] = this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y];//ennemi;
-                //this.#mapActuelle[this.#joueur.coordonnee.x][newCoordonnee.y].coordonnee = coord;
             }
         }
-        console.log(direction);
         if(direction == "gauche"){
             this.#joueur.urlSprite = "./sprite/blazkowiczGauche.png";
         }
@@ -205,13 +191,7 @@ export class Niveau{
                 else{
                     document.getElementById("niveauTermine").hidden = false;
                     localStorage.setItem('niveau', parseInt(localStorage.getItem('niveau'))+1);
-                }
-                //document.getElementById("niveauTermine").hidden = false;
-                //localStorage.setItem('niveau', parseInt(localStorage.getItem('niveau'))+1);
-                //if(parseInt(localStorage.getItem('niveau')) > 2){
-                //document.getElementById("finJeu").hidden = false;
-                //document.getElementById("niveauTermine").hidden = true;
-                  
+                }     
             }
         }
         this.#mapActuelle[newCoordonnee.x][newCoordonnee.y] = this.#joueur;
@@ -222,12 +202,7 @@ export class Niveau{
             }
         });
 
-        //console.log(this.#mapActuelle);
-
     }
-    /*updateMapActuelle(){
-        this.#mapActuelle[this.#joueur.coordonnee.x][this.#joueur.coordonnee.y] = this.#joueur;
-    }*/
 
     get mapActuelle() { return this.#mapActuelle; }
     get joueur() { return this.#joueur; }
